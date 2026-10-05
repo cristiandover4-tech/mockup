@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Redwater Motors</title>
+<meta name="description" content="Inspected used cars, trucks, SUVs and vans in Omaha, Nebraska, priced clearly and delivered nationwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="home" data-announce>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="badge b-ok" style="align-self:flex-start;padding:6px 14px;font-size:14px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          Omaha, Nebraska · Delivering nationwide
+        </span>
+        <h1 id="hero-title" class="display">Inspected used cars, priced clearly</h1>
+        <p class="lead">Every car passes our multi-point inspection and shows its full price up front. Browse online, then talk to a real person when you're ready.</p>
+
+        <form id="hero-search" class="card card-hero hero-search" role="search" aria-label="Find a car">
+          <label class="field"><span class="small muted">Body style</span>
+            <select class="input" id="hs-body">
+              <option value="">Any body style</option>
+              <option value="suv">SUVs</option>
+              <option value="truck">Trucks</option>
+              <option value="sedan">Sedans</option>
+              <option value="coupe">Coupes and convertibles</option>
+              <option value="van">Vans and minivans</option>
+              <option value="electric">Electric and hybrid</option>
+            </select>
+          </label>
+          <label class="field"><span class="small muted">Make</span>
+            <select class="input" id="hs-make"><option value="">Any make</option></select>
+          </label>
+          <label class="field"><span class="small muted">Max price</span>
+            <select class="input num" id="hs-max">
+              <option value="">No max</option>
+              <option value="15000">$15,000</option>
+              <option value="20000">$20,000</option>
+              <option value="25000">$25,000</option>
+              <option value="30000">$30,000</option>
+              <option value="35000">$35,000</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit" style="min-height:50px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            Browse inventory
+          </button>
+        </form>
+
+        <div class="hero-sub">
+          <button type="button" class="btn btn-secondary" data-scroll="talk">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+            Talk to our team
+          </button>
+          <span class="muted small">Questions? A real person answers, seven days a week.</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="photo" id="hero-car" aria-hidden="true"></div>
+        <a class="hero-float" href="vehicle.html#v1">
+          <span class="badge b-ok" style="align-self:flex-start">Inspected</span>
+          <strong>2021 Honda CR-V EX</strong>
+          <span class="muted small num">$24,900 · 41,200 mi</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Why buy from us">
+    <div class="wrap">
+      <div class="card card-pad trust">
+        <div class="trust-item"><span class="icon-box ib-ok"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><strong>Multi-point inspection</strong><span>Checked by our technicians before it's listed.</span></div></div>
+        <div class="trust-item"><span class="icon-box ib-accent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span><div><strong>Clear pricing</strong><span>The listed price includes our fees.</span></div></div>
+        <div class="trust-item"><span class="icon-box ib-info"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><div><strong>Nationwide delivery</strong><span>To your driveway, in any state.</span></div></div>
+        <div class="trust-item"><span class="icon-box ib-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg></span><div><strong>7-day exchange</strong><span>Changed your mind? Swap it. Example terms.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="body-title">
+    <div class="wrap">
+      <div class="sec-head row-between">
+        <h2 id="body-title" class="h2">Shop by body style</h2>
+        <span class="muted"><span data-total>24</span> inspected vehicles in stock</span>
+      </div>
+      <div class="grid swipe-row body-row" id="body-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:16px"></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="featured-title">
+    <div class="wrap">
+      <div class="sec-head row-between">
+        <h2 id="featured-title" class="h2">Featured vehicles</h2>
+        <a class="link-arrow" href="inventory.html">View all inventory <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="grid g-cards swipe-row" id="featured"></div>
+      <p class="muted tiny" style="margin-top:14px" data-est-note></p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="budget-title">
+    <div class="wrap split">
+      <div class="card card-pad">
+        <h2 id="budget-title" class="h3">Shop by budget</h2>
+        <p class="muted" style="margin:6px 0 20px">Start with what feels comfortable. Every price includes our fees.</p>
+        <div class="budget-links">
+          <a href="inventory.html#under-15000"><strong class="num">Under $15,000</strong><span class="muted small num" data-budget></span></a>
+          <a href="inventory.html#15000-25000"><strong class="num">$15,000 to $25,000</strong><span class="muted small num" data-budget></span></a>
+          <a href="inventory.html#25000-35000"><strong class="num">$25,000 to $35,000</strong><span class="muted small num" data-budget></span></a>
+          <a href="inventory.html#over-35000"><strong class="num">Over $35,000</strong><span class="muted small num" data-budget></span></a>
+        </div>
+      </div>
+      <div class="panel card-pad stack" style="gap:12px">
+        <span class="icon-box" style="background:var(--panel-soft)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M12 12h2M8 16h2M12 16h2M16 12v4"/></svg></span>
+        <h3 class="h3">What would I pay each month?</h3>
+        <p>Try a price, down payment and term to see an estimate. No credit check.</p>
+        <a class="link-arrow" style="margin-top:auto;color:var(--panel-link)" href="financing.html#calculator">Open payment estimator <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="how-title" class="h2">How buying works</h2></div>
+      <ol class="steps">
+        <li><span class="num-dot">1</span><strong>Find a car</strong><span>Browse inspected cars with full photos, history and the real price.</span></li>
+        <li><span class="num-dot">2</span><strong>Talk to us</strong><span>Call, text or message. Ask anything. There's no pressure to buy.</span></li>
+        <li><span class="num-dot">3</span><strong>Financing and delivery</strong><span>Get pre-qualified and a delivery quote in the same conversation.</span></li>
+        <li><span class="num-dot">4</span><strong>Receive your car</strong><span>Pick it up in Omaha or have it delivered to your door.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Sell or trade, and financing">
+    <div class="wrap grid g-2" style="gap:24px">
+      <div class="promo promo-green">
+        <h2 class="h3">Selling or trading in?</h2>
+        <p>Tell us about your car and get a fair offer in minutes. Take the cash, or put it toward your next car.</p>
+        <a class="btn btn-light" href="sell.html" style="margin-top:8px">Get your offer</a>
+      </div>
+      <div class="promo promo-blue">
+        <h2 class="h3">Financing that fits</h2>
+        <p>Loans for good credit, fair credit and first-time buyers. Checking your options doesn't commit you to anything.</p>
+        <a class="btn btn-light" href="financing.html" style="margin-top:8px">Check financing options</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="sec-head row-between">
+        <h2 id="reviews-title" class="h2">What buyers say</h2>
+        <span class="muted small">Sample reviews. The live site links each one to its verified source.</span>
+      </div>
+      <div class="grid g-3" style="gap:24px">
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg></div>
+          <blockquote>They walked me through every fee before I asked. No surprises when I signed, and the car was exactly as listed.</blockquote>
+          <figcaption class="row-between small"><strong>First-time buyer</strong><span class="muted">Sample review</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg></div>
+          <blockquote>We needed a minivan fast. They texted photos of the third row and car seat anchors so we could decide from home.</blockquote>
+          <figcaption class="row-between small"><strong>Family buyer</strong><span class="muted">Sample review</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg></div>
+          <blockquote>Delivered to Wyoming in five days. The inspection report matched what my mechanic found, which says a lot.</blockquote>
+          <figcaption class="row-between small"><strong>Truck buyer</strong><span class="muted">Sample review</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

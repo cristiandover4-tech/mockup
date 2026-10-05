@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found · Redwater Motors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="404" data-no-cta>
+<div id="site-header"></div>
+
+<main id="main" style="padding-block:clamp(56px,9vw,104px)">
+  <div class="wrap" style="max-width:720px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px">
+    <svg width="220" viewBox="0 0 120 60" aria-hidden="true" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M6 44 L10 35 Q12 31 18 30 L36 28 L48 19 Q52 16 58 16 L80 16 Q86 16 90 20 L100 28 Q112 30 114 36 L114 44 Z"/>
+      <circle cx="30" cy="45" r="7" fill="var(--bg)"/><circle cx="92" cy="45" r="7" fill="var(--bg)"/>
+      <path d="M96 4 L104 12 M104 4 L96 12" stroke="var(--accent)" stroke-width="2"/>
+      <path d="M2 56 H118" stroke="var(--muted)" stroke-dasharray="4 5" opacity="0.6"/>
+    </svg>
+    <span class="badge b-accent">Error 404</span>
+    <h1 class="h1">This road doesn't go anywhere</h1>
+    <p class="lead">The page may have moved, or the car you're looking for has already found a new home. Try a search instead.</p>
+    <form class="card card-raised" style="width:100%;display:flex;flex-wrap:wrap;gap:10px;padding:10px;margin-top:6px" action="inventory.html" role="search" onsubmit="event.preventDefault();location.href='inventory.html'">
+      <label class="search-input" for="nf-q" style="flex:1 1 260px"><span class="sr-only">Search inventory</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="nf-q" type="search" placeholder="Search make, model or body style"></label>
+      <button class="btn btn-primary" type="submit" style="min-height:50px">Search</button>
+    </form>
+    <div class="cta-actions" style="justify-content:center;margin-top:8px">
+      <a class="btn btn-secondary" href="inventory.html">Browse inventory</a>
+      <a class="btn btn-secondary" href="contact.html">Contact us</a>
+      <a class="btn btn-secondary" href="index.html">Go to home</a>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

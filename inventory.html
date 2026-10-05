@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inventory · Redwater Motors</title>
+<meta name="description" content="Browse inspected used cars, trucks, SUVs and vans with clear prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="inventory">
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><a href="inventory.html">Inventory</a><span class="sep" aria-hidden="true">/</span><span aria-current="page" id="crumb-current">All vehicles</span></nav>
+
+    <div class="row-between" style="align-items:flex-end;margin:12px 0 22px">
+      <div>
+        <h1 class="h1" id="inv-title">Used cars for sale</h1>
+        <p class="muted num" style="margin-top:6px;font-size:17px"><strong id="count" style="color:var(--ink)">24 vehicles available</strong>, all inspected</p>
+      </div>
+      <button type="button" class="btn btn-secondary" id="compare-btn" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/></svg>
+        Compare saved
+      </button>
+    </div>
+
+    <div id="cat-banner" hidden></div>
+
+    <form class="card searchbar" id="search-form" role="search" aria-label="Search inventory">
+      <label class="search-input" for="q">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <span class="sr-only">Search make, model or feature</span>
+        <input id="q" type="search" placeholder="Search make, model or feature, like heated seats" autocomplete="off">
+      </label>
+      <div class="quick-chips" id="quick-chips"></div>
+    </form>
+
+    <div class="inv-layout">
+      <aside class="filters" id="filters" aria-label="Filters">
+        <div class="filters-head">
+          <h2 class="h4" style="font-size:20px">Filters</h2>
+          <div style="display:flex;align-items:center;gap:4px">
+            <a href="#" id="clear-all" style="font-weight:600;font-size:15px;min-height:44px;display:inline-flex;align-items:center;padding:0 8px" hidden>Clear all</a>
+            <button type="button" class="btn btn-icon btn-secondary filters-close" id="filters-close" aria-label="Close filters"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+        </div>
+        <div class="filters-body" id="filters-body"></div>
+        <div class="filters-foot"><button type="button" class="btn btn-primary btn-lg btn-block num" id="show-results">Show results</button></div>
+      </aside>
+
+      <section aria-label="Results" id="results-top" style="min-width:0">
+        <div class="results-bar">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <button type="button" class="btn btn-secondary filter-toggle" id="filter-toggle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+              Filters<span id="filter-count" class="num"></span>
+            </button>
+            <span class="muted small num" id="showing" aria-live="polite"></span>
+          </div>
+          <label class="sort" for="sort">Sort by
+            <select class="input" id="sort">
+              <option value="rec">Recommended</option>
+              <option value="new">Newest listed</option>
+              <option value="plh">Price: low to high</option>
+              <option value="phl">Price: high to low</option>
+              <option value="mil">Lowest mileage</option>
+              <option value="year">Newest model year</option>
+            </select>
+          </label>
+        </div>
+        <div class="results-grid" id="results" aria-live="polite"></div>
+        <nav class="pager" id="pager" aria-label="Pagination" hidden></nav>
+        <p class="muted tiny" style="margin-top:20px;text-align:center" id="est-note"></p>
+      </section>
+    </div>
+  </div>
+
+  <dialog class="modal" id="compare-dialog" aria-labelledby="compare-title" style="width:min(980px,calc(100% - 32px))">
+    <div class="modal-head"><h2 class="h3" id="compare-title">Compare saved vehicles</h2><button type="button" class="btn btn-icon btn-secondary" id="compare-close" aria-label="Close comparison"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-body" id="compare-body"></div>
+  </dialog>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

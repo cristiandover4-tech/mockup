@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Financing · Redwater Motors</title>
+<meta name="description" content="Car loans for good credit, fair credit and first-time buyers, with a payment calculator and online application.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="financing">
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Financing</span></nav>
+  </div>
+  <section class="hero" aria-labelledby="fin-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="fin-title" class="display">Car financing, explained plainly</h1>
+        <p class="lead">We work with local banks and credit unions to find a loan that fits your budget, whatever your credit history.</p>
+        <div class="hero-sub"><a class="btn btn-primary btn-lg" href="#apply">Start application</a><span class="muted small">Takes about 8 minutes. Save and finish later.</span></div>
+      </div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px">
+        <div class="promo promo-green" style="padding:22px;gap:4px"><strong style="font-size:18px">Good credit</strong><span class="muted small">Competitive rates and terms up to 72 months.</span></div>
+        <div class="promo promo-blue" style="padding:22px;gap:4px"><strong style="font-size:18px">Fair credit</strong><span class="muted small">Lenders who look past a single score.</span></div>
+        <div class="promo promo-sand" style="padding:22px;gap:4px"><strong style="font-size:18px">First-time buyers</strong><span class="muted small">Programs for little or no credit history.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="calculator" aria-labelledby="calc-title">
+    <div class="wrap">
+      <div class="card card-raised card-pad split split-32" style="border-radius:var(--r-xl)">
+        <div class="stack" style="gap:22px">
+          <h2 id="calc-title" class="h2">Payment calculator</h2>
+          <label class="field" for="c-price"><span style="display:flex;justify-content:space-between"><span>Vehicle price</span><span class="num" id="c-price-v">$24,900</span></span><input type="range" id="c-price" min="8000" max="60000" step="500" value="24900"></label>
+          <label class="field" for="c-down"><span style="display:flex;justify-content:space-between"><span>Down payment</span><span class="num" id="c-down-v">$2,500</span></span><input type="range" id="c-down" min="0" max="15000" step="250" value="2500"></label>
+          <div class="form-grid" style="gap:18px">
+            <div class="field"><span class="legend">Loan term</span><div class="seg"><button type="button" data-term="36">36 mo</button><button type="button" data-term="48">48 mo</button><button type="button" data-term="60" aria-pressed="true">60 mo</button><button type="button" data-term="72">72 mo</button></div></div>
+            <label class="field"><span>Your credit</span><select class="input" id="c-tier"><option value="excellent">Excellent (720 and up)</option><option value="good" selected>Good (660 to 719)</option><option value="fair">Fair (600 to 659)</option><option value="rebuilding">Rebuilding (under 600)</option></select></label>
+          </div>
+        </div>
+        <div class="panel stack" style="padding:30px;gap:10px" aria-live="polite">
+          <span style="color:var(--panel-muted)">Estimated monthly payment</span>
+          <span class="num" id="c-out" style="font-family:var(--font-display);font-weight:800;font-size:clamp(44px,5vw,60px);line-height:1;letter-spacing:-0.02em">$0</span>
+          <span class="num" id="c-sum" style="color:var(--panel-muted)"></span>
+          <dl class="breakdown" style="margin-top:12px;font-size:15px">
+            <div style="padding:6px 0"><dt style="color:var(--panel-muted)">Amount financed</dt><dd id="c-fin"></dd></div>
+            <div style="padding:6px 0"><dt style="color:var(--panel-muted)">Estimated APR range</dt><dd id="c-apr"></dd></div>
+            <div style="padding:6px 0"><dt style="color:var(--panel-muted)">Total interest</dt><dd id="c-int"></dd></div>
+          </dl>
+          <p class="tiny" style="margin-top:auto;padding-top:16px">Example only, not an offer of credit. Uses the middle of the APR range and excludes taxes, title and registration. Your actual rate depends on lender approval.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Benefits">
+    <div class="wrap grid g-3" style="gap:14px">
+      <div class="card card-pad trust-item"><span class="icon-box ib-ok"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg></span><div><strong>Flexible terms</strong><span>From 24 to 72 months.</span></div></div>
+      <div class="card card-pad trust-item"><span class="icon-box ib-info"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><strong>No obligation to buy</strong><span>Getting approved commits you to nothing.</span></div></div>
+      <div class="card card-pad trust-item"><span class="icon-box ib-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></svg></span><div><strong>Soft credit check</strong><span>Where available, prequalifying won't affect your score.</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="fin-how">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="fin-how" class="h2">How it works</h2></div>
+      <ol class="steps">
+        <li><span class="num-dot">1</span><strong>Apply online</strong><span>One short application, shared with up to three lenders.</span></li>
+        <li><span class="num-dot">2</span><strong>Compare offers</strong><span>We explain each offer side by side, in plain numbers.</span></li>
+        <li><span class="num-dot">3</span><strong>Choose your car</strong><span>Shop knowing exactly what fits your monthly budget.</span></li>
+        <li><span class="num-dot">4</span><strong>Sign and drive</strong><span>Sign in person or online, then pick up or get delivery.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="apply" aria-labelledby="apply-title">
+    <div class="wrap wrap-narrow">
+      <form data-stepper="app-ok" class="card card-hero card-pad" aria-labelledby="apply-title">
+        <div data-step-top class="stack" style="gap:12px;margin-bottom:26px">
+          <div class="row-between"><h2 id="apply-title" class="h2">Financing application</h2><span class="muted num" style="font-weight:600">Step <span data-step-num>1</span> of 4</span></div>
+          <div class="progress" role="progressbar" aria-label="Application progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span data-progress style="width:25%"></span></div>
+          <div class="step-labels"><span data-step-label="1">Personal details</span><span data-step-label="2">Employment and income</span><span data-step-label="3">Vehicle and loan</span><span data-step-label="4">Review and consent</span></div>
+        </div>
+
+        <div class="step-pane" data-step="1">
+          <p class="muted" style="margin-bottom:18px">We use this to identify you with lenders. Sensitive details like your Social Security number come later, only at the review step.</p>
+          <div class="form-grid">
+            <label class="field"><span>First name</span><input class="input" id="a-first" name="first" autocomplete="given-name" required></label>
+            <label class="field"><span>Last name</span><input class="input" id="a-last" autocomplete="family-name" required></label>
+            <label class="field"><span>Date of birth</span><input class="input" id="a-dob" type="date" autocomplete="bday" required></label>
+            <label class="field"><span>Mobile phone</span><input class="input" id="a-phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required></label>
+            <label class="field span-all"><span>Email</span><input class="input" id="a-email" type="email" autocomplete="email" required></label>
+            <label class="field span-all"><span>Home address</span><input class="input" id="a-street" autocomplete="street-address" required></label>
+            <label class="field"><span>ZIP code</span><input class="input" id="a-zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" data-zip required></label>
+            <label class="field"><span>Time at this address</span><select class="input" id="a-years" required><option value="">Choose</option><option>Less than 1 year</option><option>1 to 3 years</option><option>More than 3 years</option></select></label>
+          </div>
+        </div>
+        <div class="step-pane" data-step="2" hidden>
+          <p class="muted" style="margin-bottom:18px">Lenders use income to suggest a payment that fits comfortably. Estimates are fine.</p>
+          <div class="form-grid">
+            <label class="field"><span>Employment status</span><select class="input" id="a-emp" required><option value="">Choose</option><option>Full time</option><option>Part time</option><option>Self-employed</option><option>Retired</option><option>Other</option></select></label>
+            <label class="field"><span>Employer <span class="opt">(optional)</span></span><input class="input" id="a-employer" autocomplete="organization"></label>
+            <label class="field"><span>Gross monthly income</span><input class="input num" id="a-income" inputmode="numeric" placeholder="$4,500" required></label>
+            <label class="field"><span>Time at this job</span><select class="input" id="a-tenure" required><option value="">Choose</option><option>Less than 1 year</option><option>1 to 3 years</option><option>More than 3 years</option></select></label>
+            <label class="field span-all"><span>Monthly rent or mortgage</span><input class="input num" id="a-housing" inputmode="numeric" placeholder="$1,200" required></label>
+          </div>
+        </div>
+        <div class="step-pane" data-step="3" hidden>
+          <p class="muted" style="margin-bottom:18px">Haven't picked a car yet? That's fine. Choose "Not sure yet" and we'll suggest a budget.</p>
+          <div class="form-grid">
+            <label class="field span-all"><span>Vehicle</span><select class="input" id="a-vehicle"><option>Not sure yet</option></select></label>
+            <label class="field"><span>Down payment</span><input class="input num" id="a-down" inputmode="numeric" placeholder="$2,500" required></label>
+            <label class="field"><span>Preferred term</span><select class="input" id="a-term"><option>60 months</option><option>36 months</option><option>48 months</option><option>72 months</option></select></label>
+            <div class="field span-all"><span class="legend">Trading in a car?</span><div class="seg" data-choices="trade" style="max-width:280px"><button type="button" data-choose="no" aria-pressed="true">No</button><button type="button" data-choose="yes" aria-pressed="false">Yes</button></div></div>
+          </div>
+        </div>
+        <div class="step-pane" data-step="4" hidden>
+          <div class="notice notice-ok" style="margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Your Social Security number is encrypted and shared only with the lenders you choose, to check your credit. We don't keep it after a decision.</span></div>
+          <div class="form-grid">
+            <label class="field"><span>Social Security number</span><input class="input num" id="a-ssn" type="password" inputmode="numeric" autocomplete="off" placeholder="XXX-XX-XXXX" maxlength="11" required></label>
+          </div>
+          <label class="check" style="margin-top:18px"><input type="checkbox" id="a-consent" required><span>I authorize Redwater Motors and its lending partners to obtain my credit report to review this application. I've read the <a href="privacy.html">privacy policy</a>.</span></label>
+          <p class="muted tiny" style="margin-top:14px">This prototype doesn't send or store anything you type.</p>
+        </div>
+
+        <div style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-secondary btn-lg" data-back hidden>Back</button><button type="button" class="btn btn-primary btn-lg" data-next data-final="Submit application">Continue</button></div>
+          <a href="#" class="link-arrow" data-save-later>Save and continue later</a>
+        </div>
+      </form>
+      <div id="app-ok" class="card card-hero card-pad success" hidden>
+        <span class="success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h2 class="h2">Application sent<span data-echo="name"></span></h2>
+        <p class="lead">Our finance team will call or text within one business day with your options. There's nothing more to do right now.</p>
+        <div class="cta-actions"><a class="btn btn-primary" href="inventory.html">Browse cars in your budget</a><a class="btn btn-secondary" href="index.html">Back to home</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="fin-faq">
+    <div class="wrap wrap-narrow">
+      <div class="sec-head"><h2 id="fin-faq" class="h2">Financing questions</h2></div>
+      <div class="acc">
+        <details><summary>Will applying hurt my credit score?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Prequalifying uses a soft check where our lenders support it, which doesn't affect your score. A full application with your chosen lender may involve a hard inquiry, and we tell you before that happens.</div></details>
+        <details><summary>Can I get financing with bad credit or no credit?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Often, yes. Some of our partners specialize in first-time buyers and credit rebuilding. A larger down payment or a co-signer can help.</div></details>
+        <details><summary>Can I use my own bank or credit union?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Absolutely. Bring a pre-approval letter and we'll work with your lender directly.</div></details>
+        <details><summary>Is there a penalty for paying off early?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">None of our current lending partners charge a prepayment penalty, but always confirm in your loan contract.</div></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

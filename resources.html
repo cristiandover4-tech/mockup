@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ and buying guides · Redwater Motors</title>
+<meta name="description" content="Answers about buying, financing, trade-ins, delivery and warranty, plus plain-English used car buying guides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="resources">
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">FAQ and guides</span></nav>
+    <h1 class="h1" style="margin-top:12px">Questions, answered plainly</h1>
+    <p class="lead" style="margin:8px 0 28px">Search our most common questions, or read a short guide before you buy.</p>
+  </div>
+
+  <section aria-labelledby="guides-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="guides-h" class="h2">Buying guides</h2></div>
+      <div class="grid g-3" style="gap:16px">
+        <button type="button" class="guide-card" data-guide="history"><span class="badge b-info" style="align-self:flex-start">4 min read</span><strong>How to read a vehicle history report</strong><span>What each section means and which red flags matter.</span></button>
+        <button type="button" class="guide-card" data-guide="budget"><span class="badge b-info" style="align-self:flex-start">3 min read</span><strong>How much car can I afford?</strong><span>A simple rule for your monthly payment and total cost.</span></button>
+        <button type="button" class="guide-card" data-guide="testdrive"><span class="badge b-info" style="align-self:flex-start">3 min read</span><strong>Your test drive checklist</strong><span>Ten things to check in fifteen minutes.</span></button>
+        <button type="button" class="guide-card" data-guide="ev"><span class="badge b-info" style="align-self:flex-start">5 min read</span><strong>Buying a used electric car</strong><span>Battery health, range and home charging explained.</span></button>
+        <button type="button" class="guide-card" data-guide="remote"><span class="badge b-info" style="align-self:flex-start">3 min read</span><strong>Buying a car without visiting the lot</strong><span>How remote purchases and delivery work, step by step.</span></button>
+        <button type="button" class="guide-card" data-guide="trade"><span class="badge b-info" style="align-self:flex-start">3 min read</span><strong>Getting the most for your trade-in</strong><span>Simple things that raise your offer.</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-last" aria-labelledby="faq-h">
+    <div class="wrap wrap-narrow">
+      <div class="sec-head row-between" style="align-items:center"><h2 id="faq-h" class="h2">Frequently asked questions</h2><span class="muted small num" id="faq-count" aria-live="polite"></span></div>
+      <label class="search-input card" for="faq-q" style="margin-bottom:14px;background:var(--surface);box-shadow:var(--shadow-1)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <span class="sr-only">Search questions</span>
+        <input id="faq-q" type="search" placeholder="Search questions, like warranty or trade-in" autocomplete="off">
+      </label>
+      <div class="quick-chips" style="margin-bottom:24px" role="group" aria-label="Filter by topic">
+        <button type="button" class="chip" data-topic-btn="all" aria-pressed="true">All topics</button>
+        <button type="button" class="chip" data-topic-btn="buying" aria-pressed="false">Buying</button>
+        <button type="button" class="chip" data-topic-btn="financing" aria-pressed="false">Financing</button>
+        <button type="button" class="chip" data-topic-btn="trade" aria-pressed="false">Trade-ins</button>
+        <button type="button" class="chip" data-topic-btn="delivery" aria-pressed="false">Delivery</button>
+        <button type="button" class="chip" data-topic-btn="warranty" aria-pressed="false">Warranty</button>
+      </div>
+
+      <div class="acc" id="faq">
+        <h3 class="h4" data-topic-head="buying" style="margin-top:6px">Buying</h3>
+        <details data-topic="buying"><summary>Is the listed price the price I pay?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Yes, plus only state taxes, title and registration. Our documentation fee is already included, and we never add surprise add-ons.</div></details>
+        <details data-topic="buying"><summary>Can I negotiate?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">We price every car close to market from the start, so most buyers find there's little to negotiate. If you've seen a comparable car for less, tell us and we'll take a look.</div></details>
+        <details data-topic="buying"><summary>Can I have my own mechanic inspect the car?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Absolutely. We're happy to drive it to a shop near us or let your mechanic come to the lot.</div></details>
+        <details data-topic="buying"><summary>How do I book a test drive?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Call or text us, or choose "Test drive or visit" on the contact form. We'll have the car charged or fueled and ready when you arrive.</div></details>
+
+        <h3 class="h4" data-topic-head="financing" style="margin-top:18px">Financing</h3>
+        <details data-topic="financing"><summary>Will checking my rate affect my credit score?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Prequalifying uses a soft check where available, which doesn't affect your score. We tell you before any hard inquiry happens.</div></details>
+        <details data-topic="financing"><summary>What do I need to apply?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Your address, employment and income details, and your Social Security number at the final step. Lenders may later ask for a recent pay stub.</div></details>
+
+        <h3 class="h4" data-topic-head="trade" style="margin-top:18px">Trade-ins</h3>
+        <details data-topic="trade"><summary>Can I trade in a car I still owe money on?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Yes. We pay your lender directly and apply any remaining value to your next car.</div></details>
+        <details data-topic="trade"><summary>How long is my offer valid?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Seven days or 250 more miles, whichever comes first, as long as the car matches what you described.</div></details>
+
+        <h3 class="h4" data-topic-head="delivery" style="margin-top:18px">Delivery</h3>
+        <details data-topic="delivery"><summary>Do you deliver outside Nebraska?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Yes, to all 50 states with insured carriers. We also handle out-of-state title and registration paperwork.</div></details>
+        <details data-topic="delivery"><summary>What if the car arrives damaged?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Note it on the delivery receipt and call us. The car is our responsibility until you sign, and the carrier's insurance covers transport damage.</div></details>
+
+        <h3 class="h4" data-topic-head="warranty" style="margin-top:18px" id="warranty">Warranty</h3>
+        <details data-topic="warranty"><summary>Do your cars come with a warranty?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Every car includes a 90-day or 3,000-mile limited powertrain warranty (example terms). Many also have remaining factory coverage, which we list on each car.</div></details>
+        <details data-topic="warranty"><summary>How does the 7-day exchange work?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">If the car isn't right, bring it back within 7 days and 300 miles and swap it for another one from our inventory (example terms).</div></details>
+      </div>
+      <div class="empty card" id="faq-empty" hidden>
+        <h3 class="h3">No answers match that search</h3>
+        <p class="muted">Try another word, or ask us directly. We usually reply within the hour.</p>
+        <button type="button" class="btn btn-primary" data-quick="talk">Ask a question</button>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="modal" id="guide-dialog" aria-labelledby="guide-title">
+    <div class="modal-head"><h2 class="h3" id="guide-title"></h2><button type="button" class="btn btn-icon btn-secondary" id="guide-close" aria-label="Close guide"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-body prose" id="guide-body" style="font-size:16px"></div>
+  </dialog>
+
+  <template id="guide-history"><p>A history report pulls records from insurers, repair shops and state title offices using the car's VIN.</p><p><strong style="color:var(--ink)">Check these first:</strong> title brands like salvage or flood, reported accidents and whether airbags deployed, the number of owners, and gaps in the odometer readings.</p><p>One minor accident with a quality repair isn't a deal breaker. A rebuilt title, frame damage or odometer rollback is. Every Redwater listing links to a free report.</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+14025550148">Call us</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+  <template id="guide-budget"><p>A common rule is to keep your total car costs, including payment, insurance and fuel, under 15 percent of your take-home pay.</p><p>Put down at least 10 percent if you can, and choose the shortest term with a payment you're comfortable with. Longer loans lower the payment but cost more in interest.</p><p>Try our <a href="financing.html#calculator">payment calculator</a> to test different prices and terms.</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+14025550148">Call us</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+  <template id="guide-testdrive"><p>Drive on a mix of city streets and highway. Listen for clunks over bumps, feel for vibration at highway speed, and brake firmly once in a safe spot.</p><p>Test every button: windows, locks, climate, seat heaters, the infotainment screen and all cameras. Check that the steering returns to center on its own.</p><p>Afterward, look under the car for fresh drips and ask to see the inspection report.</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+14025550148">Call us</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+  <template id="guide-ev"><p>Battery health matters most. Ask for a battery health percentage; above 85 percent is excellent for a car a few years old.</p><p>Plan for home charging. A standard outlet adds about 4 miles of range per hour, while a 240-volt charger adds 25 to 35.</p><p>Many used EVs under $25,000 qualify for a federal tax credit. Ask us whether a car you like is eligible.</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+14025550148">Call us</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+  <template id="guide-remote"><p>Start with a video call or extra photos of anything you want to see closely. Then get financing and a delivery quote, sign documents electronically, and choose a delivery date.</p><p>When the car arrives, inspect it with the driver before signing. Our 7-day exchange gives you time to be sure (example terms).</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+14025550148">Call us</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+  <template id="guide-trade"><p>Clean the car inside and out, gather your service records, and bring both sets of keys. These small things add real value.</p><p>Fix cheap items like burned-out bulbs, but skip expensive repairs. You rarely get that money back.</p><p>Be honest about known issues so the offer doesn't change when we see the car.</p><div class="cta-actions" style="margin-top:8px"><a class="btn btn-primary" href="sell.html">Get your offer</a><button type="button" class="btn btn-secondary" data-quick="talk">Send a message</button></div></template>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

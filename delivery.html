@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delivery · Redwater Motors</title>
+<meta name="description" content="Insured car delivery to all 50 states, or free pickup in Omaha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="delivery">
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Delivery</span></nav>
+  </div>
+  <section class="hero" aria-labelledby="del-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="del-title" class="display">Your car, delivered to your door</h1>
+        <p class="lead">We ship to all 50 states with licensed, insured carriers, and we track every mile so you don't have to.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><span class="pill-tag">Fully insured transport</span><span class="pill-tag">Text updates along the way</span><span class="pill-tag">Inspection on arrival</span></div>
+      </div>
+      <div class="panel" style="padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
+        <span style="color:var(--panel-muted)">Typical door-to-door times from Omaha</span>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px" class="num">
+          <div style="background:var(--panel-soft);border-radius:8px;padding:16px"><strong style="font-size:22px;color:var(--panel-ink)">1 to 2 days</strong><p class="small">Kansas City, Des Moines</p></div>
+          <div style="background:var(--panel-soft);border-radius:8px;padding:16px"><strong style="font-size:22px;color:var(--panel-ink)">2 to 4 days</strong><p class="small">Denver, Chicago, Minneapolis</p></div>
+          <div style="background:var(--panel-soft);border-radius:8px;padding:16px"><strong style="font-size:22px;color:var(--panel-ink)">4 to 6 days</strong><p class="small">Dallas, Atlanta, Phoenix</p></div>
+          <div style="background:var(--panel-soft);border-radius:8px;padding:16px"><strong style="font-size:22px;color:var(--panel-ink)">5 to 9 days</strong><p class="small">Seattle, New York, Miami</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="del-options">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="del-options" class="h2">Delivery options</h2></div>
+      <div class="grid g-3" style="gap:20px">
+        <div class="card card-raised card-pad stack" style="gap:12px"><span class="badge b-violet" style="align-self:flex-start">Most protection</span><h3 class="h3">Enclosed transport</h3><p class="muted">Covered trailer, shielded from weather and road debris. Best for convertibles and long trips.</p><div class="tile num"><strong style="font-size:20px">$1.10 to $1.60 per mile</strong><p class="muted small">About 5 to 9 days, coast to coast</p></div><a class="btn btn-secondary" href="#quote" data-transport="enclosed" style="margin-top:auto">Get a quote</a></div>
+        <div class="card card-raised card-pad stack" style="gap:12px"><span class="badge b-accent" style="align-self:flex-start">Most popular</span><h3 class="h3">Open transport</h3><p class="muted">The standard way cars ship across the country, on a multi-car carrier.</p><div class="tile num"><strong style="font-size:20px">$0.60 to $1.00 per mile</strong><p class="muted small">About 4 to 8 days, coast to coast</p></div><a class="btn btn-secondary" href="#quote" data-transport="open" style="margin-top:auto">Get a quote</a></div>
+        <div class="card card-raised card-pad stack" style="gap:12px"><span class="badge b-ok" style="align-self:flex-start">Free</span><h3 class="h3">Local pickup</h3><p class="muted">Collect your car at our Omaha lot. We also deliver free within 50 miles.</p><div class="tile num"><strong style="font-size:20px">$0</strong><p class="muted small">Same week, at a time you book</p></div><a class="btn btn-secondary" href="#quote" data-transport="pickup" style="margin-top:auto">Get a quote</a></div>
+      </div>
+      <p class="muted tiny" style="margin-top:14px">Costs are typical examples. Your quote depends on distance, timing and season.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="quote" aria-labelledby="quote-title">
+    <div class="wrap split split-32">
+      <div class="card card-hero card-pad">
+        <form id="quote-form" data-fake="quote-ok" data-onsuccess="quote">
+          <h2 id="quote-title" class="h2">Get a delivery quote</h2>
+          <p class="muted" style="margin:6px 0 20px">See an instant estimate. We confirm a fixed price within one business day.</p>
+          <div class="form-grid">
+            <label class="field span-all"><span>Vehicle</span><select class="input" id="q-vehicle"><option value="">I haven't chosen yet</option></select></label>
+            <label class="field"><span>Destination ZIP code</span><input class="input num" id="q-zip" inputmode="numeric" maxlength="5" placeholder="80202" data-zip required></label>
+            <label class="field"><span>Transport</span><select class="input" id="q-type"><option value="open">Open transport</option><option value="enclosed">Enclosed transport</option><option value="pickup">Local pickup or delivery</option></select></label>
+            <label class="field"><span>Preferred timing</span><select class="input" id="q-when"><option>As soon as possible</option><option>Within 2 weeks</option><option>I'm flexible</option></select></label>
+            <label class="field"><span>Email</span><input class="input" id="q-email" type="email" autocomplete="email" required></label>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit" style="margin-top:22px">Get my delivery quote</button>
+        </form>
+        <div id="quote-ok" class="success" hidden>
+          <span class="success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <h2 class="h3">Your delivery estimate</h2>
+          <p class="lead" id="q-estimate" style="font-size:17px"></p>
+          <p class="muted small">We've emailed you a copy. A coordinator will follow up with a fixed price.</p>
+          <button type="button" class="btn btn-secondary" data-reset="quote-form">Try another ZIP code</button>
+        </div>
+      </div>
+      <div class="panel card-pad">
+        <h2 class="h3" style="margin-bottom:22px">From our lot to your driveway</h2>
+        <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+          <li style="display:flex;gap:16px"><div style="display:flex;flex-direction:column;align-items:center"><span class="num-dot" style="width:34px;height:34px;background:#F26B1D;color:#1C1C1C">1</span><span style="flex:1;width:2px;min-height:22px;background:var(--panel-soft)"></span></div><div style="padding-bottom:20px"><strong style="color:var(--panel-ink)">Confirm your purchase</strong><p class="small">We lock in a pickup date with the carrier.</p></div></li>
+          <li style="display:flex;gap:16px"><div style="display:flex;flex-direction:column;align-items:center"><span class="num-dot" style="width:34px;height:34px;background:#F26B1D;color:#1C1C1C">2</span><span style="flex:1;width:2px;min-height:22px;background:var(--panel-soft)"></span></div><div style="padding-bottom:20px"><strong style="color:var(--panel-ink)">Final check and photos</strong><p class="small">We photograph the car from every angle before it leaves.</p></div></li>
+          <li style="display:flex;gap:16px"><div style="display:flex;flex-direction:column;align-items:center"><span class="num-dot" style="width:34px;height:34px;background:#F26B1D;color:#1C1C1C">3</span><span style="flex:1;width:2px;min-height:22px;background:var(--panel-soft)"></span></div><div style="padding-bottom:20px"><strong style="color:var(--panel-ink)">In transit</strong><p class="small">Text updates at pickup, midway and the day before arrival.</p></div></li>
+          <li style="display:flex;gap:16px"><div><span class="num-dot" style="width:34px;height:34px;background:#F26B1D;color:#1C1C1C">4</span></div><div><strong style="color:var(--panel-ink)">Arrival and walkthrough</strong><p class="small">Inspect the car with the driver, then sign for it.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="del-faq">
+    <div class="wrap wrap-narrow">
+      <div class="sec-head"><h2 id="del-faq" class="h2">Delivery questions</h2></div>
+      <div class="acc">
+        <details><summary>How long does delivery take?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Most deliveries arrive within 2 to 9 days depending on distance. We confirm a window before the car leaves and text you along the way.</div></details>
+        <details><summary>Is my car insured during transport?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Yes. Every carrier we use is licensed and carries cargo insurance. The car stays our responsibility until you sign for it.</div></details>
+        <details><summary>What should I check when it arrives?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="acc-body">Walk around the car with the driver and compare it to the photos we send before pickup. Note anything new on the delivery receipt before signing, then call us.</div></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

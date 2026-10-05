@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reserve this vehicle · Redwater Motors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="reserve">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Redwater Motors home">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="#1C1C1C"/><path d="M8 26 C12 18, 19 13.5, 28 11" stroke="#F26B1D" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M9 30 C15 23, 21 20, 28 18.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75"/></svg>
+      <span class="logo-word">Redwater Motors</span>
+    </a>
+    <div class="hdr-actions">
+      <span class="muted small" style="display:none" id="q-label">Questions?</span>
+      <a class="hdr-phone" href="tel:+14025550148" style="background:var(--surface-2)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(402) 555-0148</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="sec-last">
+  <div class="wrap">
+    <a class="link-arrow" id="back-link" href="vehicle.html" style="margin-top:16px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      Back to the vehicle
+    </a>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px;align-items:start;margin-top:12px" class="reserve-grid">
+      <section aria-labelledby="res-title" style="grid-column:span 2;min-width:0" class="reserve-main">
+        <div data-hide-on-done>
+          <h1 id="res-title" class="h1">Reserve this vehicle</h1>
+          <p class="lead" style="margin:8px 0 26px">Send a purchase request and we'll hold the car while we talk through the details. It takes about three minutes.</p>
+        </div>
+
+        <form data-stepper="res-ok" aria-label="Purchase request">
+          <div data-step-top style="display:flex;flex-direction:column;gap:10px;margin-bottom:22px">
+            <div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><span data-progress style="width:33%"></span></div>
+            <div class="step-labels"><span data-step-label="1">1. Contact details</span><span data-step-label="2">2. Delivery or pickup</span><span data-step-label="3">3. Verify and send</span></div>
+          </div>
+
+          <div class="card card-raised card-pad">
+            <div class="step-pane" data-step="1">
+              <h2 class="h3" style="margin-bottom:18px">Your contact details</h2>
+              <div class="form-grid">
+                <label class="field"><span>First name</span><input class="input" id="r-first" name="first" autocomplete="given-name" required></label>
+                <label class="field"><span>Last name</span><input class="input" id="r-last" autocomplete="family-name" required></label>
+                <label class="field"><span>Mobile phone</span><input class="input" id="r-phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required></label>
+                <label class="field"><span>Email</span><input class="input" id="r-email" type="email" autocomplete="email" required></label>
+                <div class="field span-all">
+                  <span class="legend">How should we reach you first?</span>
+                  <div style="display:flex;flex-wrap:wrap;gap:8px" data-choices="reach">
+                    <button type="button" class="chip chip-sq" data-choose="text" aria-pressed="true">Text</button>
+                    <button type="button" class="chip chip-sq" data-choose="call" aria-pressed="false">Call</button>
+                    <button type="button" class="chip chip-sq" data-choose="email" aria-pressed="false">Email</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-pane" data-step="2" hidden>
+              <h2 class="h3" style="margin-bottom:18px">Delivery or pickup</h2>
+              <div class="choice-grid" data-choices="handover" style="margin-bottom:20px">
+                <button type="button" class="choice" data-choose="delivery" aria-pressed="true"><strong>Deliver to my address</strong><span>We quote transport before anything is final.</span></button>
+                <button type="button" class="choice" data-choose="pickup" aria-pressed="false"><strong>Pick up in Omaha</strong><span>Free. We book a time that suits you.</span></button>
+              </div>
+              <div class="form-grid" data-choice-for="handover:delivery">
+                <label class="field span-all"><span>Street address</span><input class="input" id="r-street" autocomplete="street-address" required></label>
+                <label class="field"><span>City</span><input class="input" id="r-city" autocomplete="address-level2" required></label>
+                <label class="field"><span>State</span>
+                  <select class="input" id="r-state" autocomplete="address-level1" required>
+                    <option value="">Choose a state</option><option>Nebraska</option><option>Iowa</option><option>Kansas</option><option>Missouri</option><option>South Dakota</option><option>Colorado</option><option>Minnesota</option><option>Another state</option>
+                  </select>
+                </label>
+                <label class="field"><span>ZIP code</span><input class="input" id="r-zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" data-zip required></label>
+              </div>
+              <div class="notice notice-ok" data-choice-for="handover:pickup" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <span>Pickup at 1820 Leavenworth St, Omaha, NE 68104. We'll text you to confirm a day and time.</span>
+              </div>
+            </div>
+
+            <div class="step-pane" data-step="3" hidden>
+              <h2 class="h3" style="margin-bottom:6px">Verify your identity <span class="muted" style="font-weight:500;font-size:17px">(optional)</span></h2>
+              <p class="muted" style="margin-bottom:18px">A photo of your driver's license now speeds up paperwork later. You can skip this and do it in person.</p>
+              <label class="drop" for="r-file">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+                <strong>Upload front of license</strong>
+                <span class="muted small" data-file-name>JPG, PNG or PDF, up to 10 MB. Drag a file here or choose one.</span>
+                <input type="file" id="r-file" accept="image/*,.pdf">
+              </label>
+              <div class="notice notice-ok" style="margin-top:16px">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                <span>Your file is encrypted, used only to prepare your paperwork, and deleted after the sale or within 30 days if you don't buy.</span>
+              </div>
+              <label class="check" style="margin-top:18px"><input type="checkbox" id="r-consent" required><span>I agree to be contacted about this request and accept the <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms of service</a>.</span></label>
+            </div>
+
+            <div style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <button type="button" class="btn btn-secondary btn-lg" data-back hidden>Back</button>
+                <button type="button" class="btn btn-primary btn-lg" data-next data-final="Submit purchase request">Continue</button>
+              </div>
+              <a href="#" class="link-arrow" data-save-later>Save and finish later</a>
+            </div>
+          </div>
+        </form>
+
+        <div id="res-ok" class="card card-raised card-pad success" hidden>
+          <span class="success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h1 class="h1" style="font-size:clamp(30px,3.6vw,40px)">Request received<span data-echo="name"></span>. The <span data-vname>car</span> is on hold for you.</h1>
+          <p class="lead">Nothing has been charged and nothing is binding yet. Here's what happens next:</p>
+          <ol class="steps" style="grid-template-columns:1fr;gap:10px;margin:8px 0 12px;width:100%">
+            <li style="flex-direction:row;align-items:center;padding:16px 18px;background:var(--surface-2);box-shadow:none"><span class="num-dot">1</span><span>A salesperson texts you within two business hours to confirm details.</span></li>
+            <li style="flex-direction:row;align-items:center;padding:16px 18px;background:var(--surface-2);box-shadow:none"><span class="num-dot">2</span><span>We send a written price summary with taxes and delivery for your ZIP code.</span></li>
+            <li style="flex-direction:row;align-items:center;padding:16px 18px;background:var(--surface-2);box-shadow:none"><span class="num-dot">3</span><span>You decide. If you go ahead, we set up payment, paperwork and delivery together.</span></li>
+          </ol>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="tel:+14025550148">Call (402) 555-0148</a>
+            <button type="button" class="btn btn-secondary btn-lg" data-quick="talk">Send a message</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card card-hero" aria-label="Your vehicle" id="sum" style="overflow:hidden;position:sticky;top:calc(var(--hdr-h) + 20px)"></aside>
+    </div>
+  </div>
+</main>
+
+<footer class="ftr"><div class="wrap" style="padding-block:22px"><div class="ftr-bottom" style="margin:0;padding:0;box-shadow:none"><span>© 2026 Redwater Motors. A fictive dealership.</span><span style="display:flex;gap:18px"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a></span></div></div></footer>
+<style>
+  @media (max-width: 1023px) { .reserve-main { grid-column: auto !important; } #sum { position: static !important; order: -1; } }
+  @media (min-width: 1024px) { .reserve-grid { grid-template-columns: minmax(0, 1fr) 380px !important; } .reserve-main { grid-column: auto !important; } }
+</style>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vehicle details · Redwater Motors</title>
+<meta name="description" content="Photos, specs, inspection report and price for this inspected used vehicle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="vehicle" data-no-cta>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb" id="crumbs"><a href="index.html">Home</a><span class="sep" aria-hidden="true">/</span><a href="inventory.html">Inventory</a></nav>
+    <div class="vd" id="vd-root" style="margin-top:12px"></div>
+
+    <section class="sec" aria-labelledby="sim-h">
+      <div class="sec-head row-between"><h2 id="sim-h" class="h2">Similar vehicles</h2><a class="link-arrow" href="inventory.html">View all inventory <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="grid g-cards swipe-row" id="similar"></div>
+    </section>
+
+    <section class="sec" aria-labelledby="rec-h" id="recent-sec" hidden>
+      <h2 id="rec-h" class="h4" style="font-size:20px;margin-bottom:16px">Recently viewed</h2>
+      <div class="recent-row" id="recent"></div>
+    </section>
+  </div>
+
+  <div class="drawer" id="calc-drawer" role="dialog" aria-modal="true" aria-labelledby="cd-title" hidden>
+    <div class="drawer-head"><h2 class="h3" id="cd-title">Estimate your payment</h2><button type="button" class="btn btn-icon btn-secondary" data-close aria-label="Close calculator"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="drawer-body">
+      <div class="panel" style="padding:24px;border-radius:10px">
+        <span style="color:var(--panel-muted)">Estimated monthly payment</span>
+        <div class="num" id="cd-out" style="font-family:var(--font-display);font-weight:800;font-size:52px;line-height:1.05;color:var(--panel-ink)">$0</div>
+        <p class="num small" id="cd-sum"></p>
+      </div>
+      <dl class="breakdown"><div><dt class="muted">Vehicle price</dt><dd id="cd-price"></dd></div><div><dt class="muted">Amount financed</dt><dd id="cd-fin"></dd></div></dl>
+      <label class="field" for="cd-down"><span style="display:flex;justify-content:space-between"><span>Down payment</span><span class="num" id="cd-down-v"></span></span><input type="range" id="cd-down" min="0" step="500"></label>
+      <div class="field"><span class="legend">Loan term</span><div class="seg"><button type="button" data-term="36">36 mo</button><button type="button" data-term="48">48 mo</button><button type="button" data-term="60">60 mo</button><button type="button" data-term="72">72 mo</button></div></div>
+      <label class="field"><span>Your credit</span><select class="input" id="cd-tier"><option value="excellent">Excellent (720 and up)</option><option value="good">Good (660 to 719)</option><option value="fair">Fair (600 to 659)</option><option value="rebuilding">Rebuilding (under 600)</option></select></label>
+      <p class="muted tiny">Example only, not an offer of credit. Uses the middle of the APR range for your credit and excludes taxes, title and registration.</p>
+      <div class="grid" style="gap:10px"><a class="btn btn-primary btn-lg" href="financing.html#apply">Get pre-qualified</a><button type="button" class="btn btn-secondary" data-close>Done</button></div>
+    </div>
+  </div>
+
+  <dialog class="modal" id="info-dialog" aria-labelledby="info-title">
+    <div class="modal-head"><h2 class="h3" id="info-title"></h2><button type="button" class="btn btn-icon btn-secondary" id="info-close" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="modal-body" id="info-body"></div>
+  </dialog>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>
